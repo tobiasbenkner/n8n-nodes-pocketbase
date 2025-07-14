@@ -116,7 +116,12 @@ export class Pocketbase implements INodeType {
 			);
 
 			const record = response.data;
-			const image_url = `${auth.url}/api/files/${collection}/${record.id}/${record[column]}`;
+
+			const createdImage = Array.isArray(record[column])
+				? record[column][record[column].length - 1]
+				: record[column];
+
+			const image_url = `${auth.url}/api/files/${collection}/${record.id}/${createdImage}`;
 			returnData.push({
 				image_url: image_url,
 			});

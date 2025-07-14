@@ -1,7 +1,7 @@
 {
-	"name": "n8n-nodes-pocketbase",
-	"version": "0.1.0",
-	"description": "",
+	"name": "@tobiasbenkner/n8n-nodes-pocketbase",
+	"version": "0.0.2",
+	"description": "Pocketbase node for append an base64 image to a collection",
 	"keywords": [
 		"n8n-community-node-package"
 	],
